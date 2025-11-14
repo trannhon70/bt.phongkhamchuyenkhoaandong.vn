@@ -23,8 +23,8 @@ $dbReadTotalTime = ($dbReadEndTime - $dbReadStarTime) / 1e+6;
     header("Cache-Control: public, max-age=31536000");
     header('Server-Timing: db;desc="Database";dur=' . $dbReadTotalTime);
 
-    // $local = 'http://localhost/_andong/bt.phongkhamchuyenkhoaandong.vn'
-    $local = 'https://bt.phongkhamchuyenkhoaandong.vn'
+    $local = 'http://localhost/_andong/bt.phongkhamchuyenkhoaandong.vn'
+    // $local = 'https://bt.phongkhamchuyenkhoaandong.vn'
     ?>
 
 
