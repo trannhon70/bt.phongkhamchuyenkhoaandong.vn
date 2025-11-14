@@ -23,7 +23,7 @@ $dbReadTotalTime = ($dbReadEndTime - $dbReadStarTime) / 1e+6;
     header("Cache-Control: public, max-age=31536000");
     header('Server-Timing: db;desc="Database";dur=' . $dbReadTotalTime);
 
-    // $local ='http://localhost/bt.phongkhamchuyenkhoaandong.vn'
+    // $local = 'http://localhost/_andong/bt.phongkhamchuyenkhoaandong.vn'
     $local = 'https://bt.phongkhamchuyenkhoaandong.vn'
     ?>
 
@@ -35,9 +35,9 @@ $dbReadTotalTime = ($dbReadEndTime - $dbReadStarTime) / 1e+6;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description"
-        content="Phòng khám đa khoa chuyên điều trị bệnh nam khoa, bệnh xã hội, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
+        content="Phòng khám Chuyên Khoa chuyên điều trị bệnh nam khoa, bệnh xã hội, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
     <meta name="google-site-verification" content="S7Mm110aG6MzA_7c9_sGh2xZi45zYb0mQpFet0bWD7E" />
-    <title>Phòng khám đa khoa</title>
+    <title>Phòng khám Chuyên Khoa</title>
     <link rel="preload" href="<?php echo $local ?>/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif" as="image">
 
 

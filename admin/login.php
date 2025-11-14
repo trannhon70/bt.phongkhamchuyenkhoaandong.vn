@@ -1,14 +1,14 @@
 <?php
-	include '../classes/user.php';
-  Session::checkLogin();
+include '../classes/user.php';
+Session::checkLogin();
 ?>
 <?php
 $class = new users();
-	if($_SERVER['REQUEST_METHOD'] === 'POST'){
-		$user_name = $_POST['user_name'];
-		$password = md5($_POST['password']);
-		$login_check = $class->login_user($user_name,$password) ;
-	}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $user_name = $_POST['user_name'];
+    $password = md5($_POST['password']);
+    $login_check = $class->login_user($user_name, $password);
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ $class = new users();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>phòng khám đa khoa</title>
+    <title>phòng khám Chuyên Khoa</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -52,18 +52,18 @@ $class = new users();
 
 <body>
     <div id="login">
-        <h3 class="text-center text-white pt-5"> PHÒNG KHÁM ĐA KHOA AN ĐÔNG</h3>
+        <h3 class="text-center text-white pt-5"> PHÒNG KHÁM Chuyên Khoa AN ĐÔNG</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
                             <h3 class="text-center text-info">Login</h3>
-                            <span style="color:red;" ><?php 
-				if(isset($login_check)){
-					echo $login_check;
-				}
-			?></span>
+                            <span style="color:red;"><?php
+                                                        if (isset($login_check)) {
+                                                            echo $login_check;
+                                                        }
+                                                        ?></span>
                             <div class="form-group">
                                 <label for="username" class="text-info">Username:</label><br>
                                 <input type="text" name="user_name" id="username" class="form-control">

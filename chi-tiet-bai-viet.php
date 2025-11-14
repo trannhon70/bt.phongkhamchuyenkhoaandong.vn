@@ -13,8 +13,7 @@ $postDetail = $bai_viet->getBaiViet_bySlug($slug);
 
 if (isset($postDetail) && isset($postDetail['name_khoa'])) {
     $getPostDetail = $postDetail;
-}
-else {
+} else {
     $postTinTuc = $bai_viet->getBaiVietDauTienByBenh($slug);
     if ($postTinTuc) {
         $getPostDetail = $postTinTuc;
@@ -56,35 +55,35 @@ if (strpos($_SERVER['REQUEST_URI'], 'phong-kham-an-dong-phong-kham-da-khoa-uy-ti
                     </a>
                 <?php } ?>
                 <div id="bai-viet">
-                     <!-- <?php echo htmlspecialchars_decode($getPostDetail['content']); ?>  -->
-                    </div>
+                    <!-- <?php echo htmlspecialchars_decode($getPostDetail['content']); ?>  -->
+                </div>
                 <div class="bai-viet-footer">Nội dung bài viết cung cấp nhằm mục đích tham khảo thêm kiến thức y tế,
                     một số nội dung có thể không thuộc nghiệp vụ của phòng khám chúng tôi, Hiệu quả của việc hỗ trợ
                     điều trị phụ thuộc vào cơ địa của mỗi người. Cần biết thông tin liên hệ để được tư vấn trực
-                    tuyến miễn phí.<a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" >[TƯ VẤN TRỰC TUYẾN]</a>
+                    tuyến miễn phí.<a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">[TƯ VẤN TRỰC TUYẾN]</a>
                 </div>
             </div>
             <div class="detail__right">
                 <div class="detail__right-list">
-                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en"  class="detail__right-item">
+                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="detail__right-item">
                         <img width="80px" height="auto" src="<?php echo $local ?>/images/icons/icon_call.gif" alt="...">
                     </a>
-                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en"  class="detail__right-item">
+                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="detail__right-item">
                         <img width="80px" height="auto" src="<?php echo $local ?>/images/icons/icon_calende.webp" alt="...">
                     </a>
-                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en"  class="detail__right-item">
+                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="detail__right-item">
                         <img width="80px" height="auto" src="<?php echo $local ?>/images/icons/icon_mess.gif" alt="...">
                     </a>
                 </div>
-                <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" >
+                <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
                     <img src="<?php echo $local ?>/images/banner/banner_tuvan.webp" alt="..." width="100%" height="auto">
                 </a>
-                <div class="detail__right-scroll" >
-                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" >
+                <div class="detail__right-scroll">
+                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
                         <img style="border: 1px solid #1A925B; border-radius: 10px; " src="<?php echo $local ?>/images/banner/banner_khuyenmai.webp" alt="..." width="100%" height="auto">
                     </a>
                 </div>
-                
+
             </div>
         </section>
 
@@ -95,30 +94,31 @@ if (strpos($_SERVER['REQUEST_URI'], 'phong-kham-an-dong-phong-kham-da-khoa-uy-ti
 
     <script>
         const slug = "<?php echo $slug; ?>";
+
         function fetchPostData() {
-        fetch(`<?php echo $local ?>/api/baiviet/get-by-slug-bai-viet.php?slug=${slug}`) 
-            .then(response => response.json()) 
-            .then(data => {
-                if (data) {
-                    document.getElementById('detail__left-title').innerText = data.data.tieu_de || 'Không có tiêu đề';
+            fetch(`<?php echo $local ?>/api/baiviet/get-by-slug-bai-viet.php?slug=${slug}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data) {
+                        document.getElementById('detail__left-title').innerText = data.data.tieu_de || 'Không có tiêu đề';
 
-                    document.getElementById('bai-viet').innerHTML = data.data.content || 'Không có nội dung';
-                    
-                    applyCSSandJS();
-                    checkImgMobile()
-                    
-                } else {
-                    console.log('Không tìm thấy dữ liệu');
-                }
-            })
-            .catch(error => {
-                console.error('Lỗi khi fetch dữ liệu:', error);
-            });
-    }
+                        document.getElementById('bai-viet').innerHTML = data.data.content || 'Không có nội dung';
 
-    // Gọi hàm fetch ngay lập tức, sau đó mỗi 10 giây
-    fetchPostData();
-    setInterval(fetchPostData, 10000);
+                        applyCSSandJS();
+                        checkImgMobile()
+
+                    } else {
+                        console.log('Không tìm thấy dữ liệu');
+                    }
+                })
+                .catch(error => {
+                    console.error('Lỗi khi fetch dữ liệu:', error);
+                });
+        }
+
+        // Gọi hàm fetch ngay lập tức, sau đó mỗi 10 giây
+        fetchPostData();
+        setInterval(fetchPostData, 10000);
     </script>
     <script>
         function applyCSSandJS() {
@@ -168,7 +168,7 @@ if (strpos($_SERVER['REQUEST_URI'], 'phong-kham-an-dong-phong-kham-da-khoa-uy-ti
                 let content = baiVietElement.innerHTML;
                 let updatedContent = content.replace(/\(028\) 7776 7777/g, '0968 063 109, 028 7777 9888');
 
-                updatedContent = updatedContent.replace(/Số\.73, Kinh Dương Vương, P\.12, Q\.6, TP\.HCM\./g, '360 An Dương Vương, P.4, Q.5, TP.HCM');
+                updatedContent = updatedContent.replace(/Số\.73, Kinh Dương Vương, P\.12, Q\.6, TP\.HCM\./g, '360 An Dương Vương, P. Chợ Quán, TP. HCM');
                 updatedContent = updatedContent.replace(/73, Kinh Dương Vương, P\.12, Q\.6, TPHCM\./g, '360 An Dương Vương, P.4, Q.5, TPHCM');
                 updatedContent = updatedContent.replace(/73, Kinh Dương Vương, P\.12, Q\.6, TPHCM/g, '360 An Dương Vương, P.4, Q.5, TPHCM');
                 updatedContent = updatedContent.replace(/Nhật Việt/g, 'An Đông');
@@ -189,13 +189,13 @@ if (strpos($_SERVER['REQUEST_URI'], 'phong-kham-an-dong-phong-kham-da-khoa-uy-ti
 
                     //hiển thị css img chatbox
                     if (imgElements[i].src.startsWith('<?php echo $local ?>/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
-                    // if (imgElements[i].src.startsWith('http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
+                        // if (imgElements[i].src.startsWith('http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
                         true) {
                         imgElements[i].style.borderRadius = '8px';
                         let divWrapper = document.createElement('a');
                         divWrapper.href = "https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en";
                         divWrapper.className = 'glow-on-hover';
-                       
+
                         imgElements[i].parentNode.insertBefore(divWrapper, imgElements[i]);
                         divWrapper.appendChild(imgElements[i])
                     }
@@ -283,6 +283,5 @@ if (strpos($_SERVER['REQUEST_URI'], 'phong-kham-an-dong-phong-kham-da-khoa-uy-ti
         // document.addEventListener('DOMContentLoaded', () => {
         //     applyCSSandJS();
         // });
-
     </script>
     <?php include_once 'inc/footer.php' ?>
