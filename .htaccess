@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Rewrite for trang-chu.html
+RewriteRule ^trang-chu\.html$ index.php [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)\.html$ chi-tiet-bai-viet.php?tintuc=$1 [L]
+
+<RequireAll>
+    Require all granted
+    Require not ip 115.78.128.131
+</RequireAll>
