@@ -1,59 +1,57 @@
 .footer > hr {
-    background: linear-gradient(0deg, rgba(217, 217, 217, 0) 0%, #D8D8D8 100%);
+    background: linear-gradient(0deg, rgba(217, 217, 217, 0) 0%, #d8d8d8 100%);
     height: 15px;
     border: 0px;
 }
 
-.footer_container{
+.footer_container {
     max-width: var(--container);
     margin: var(--margin-auto);
     box-sizing: var(--border-box);
     margin-top: 15px;
 }
 
-.footer_container-list{
+.footer_container-list {
     display: var(--display-flex);
     box-sizing: var(--border-box);
 }
 
 .footer_container-item,
-.footer_container-item1{
+.footer_container-item1 {
     width: 30%;
     padding: 10px;
 }
 
-.footer_container-itemR{
+.footer_container-itemR {
     width: 70%;
 }
 
-.footer_container-item-title{
+.footer_container-item-title {
     display: var(--display-flex);
-    gap: 30px;
+    gap: 15px;
 }
 
-.footer_container-item-title-left{
+.footer_container-item-title-left {
     width: 60px;
 }
 
-.footer_container-item-title-right{
+.footer_container-item-title-right {
     text-align: var(--center);
-    
 }
 
-.footer_container-item-title-right > h5{
+.footer_container-item-title-right > h5 {
     font-size: var(--font-size-24);
     color: var(--color-1A925B);
     font-weight: var(--font-weight-700);
     margin-top: 10px;
 }
 
-.footer_container-item-title-right > span{
+.footer_container-item-title-right > span {
     font-size: var(--font-size-16);
     color: var(--color-black);
     font-weight: var(--font-weight-700);
     margin-top: 5px;
 }
-
 
 .footer_container-item > ul {
     list-style: none;
@@ -67,11 +65,11 @@
     color: var(--color-black);
 }
 
-.footer_container-item > ul > li:hover{
+.footer_container-item > ul > li:hover {
     background-color: var(--background-color-E3E3E3);
 }
 
-.footer_container-item-time{
+.footer_container-item-time {
     font-size: var(--font-size-16);
     text-transform: uppercase;
     font-weight: var(--font-weight-700);
@@ -79,7 +77,7 @@
     margin-top: 10px;
 }
 
-.footer_container-item > span{
+.footer_container-item > span {
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-400);
     color: var(--color-black);
@@ -87,13 +85,13 @@
     display: var(--display-block);
 }
 
-.footer_container-item-map{
+.footer_container-item-map {
     margin-top: 10px;
     width: 100%;
     position: var(--position-relative);
-}   
+}
 
-.footer_container-item-map > button{
+.footer_container-item-map > button {
     background-color: var(--background-color-1A925B);
     color: var(--color-white);
     width: 200px;
@@ -106,7 +104,7 @@
     font-weight: var(--font-weight-700);
 }
 
-.footer_container-item-map-1  {
+.footer_container-item-map-1 {
     width: 100%;
     cursor: pointer;
 }
@@ -120,7 +118,7 @@
     display: none;
 }
 
-.footer_container-item-map:hover > .footer_container-item-map-eye{
+.footer_container-item-map:hover > .footer_container-item-map-eye {
     display: block;
 }
 
@@ -132,7 +130,6 @@
     transform: translate(-50%, -50%);
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.4);
-    
 }
 
 .modal__footer-content {
@@ -161,30 +158,30 @@
     text-decoration: none;
 }
 
-.footer_container-item1 > h5{
+.footer_container-item1 > h5 {
     color: var(--color-1A925B);
     font-size: var(--font-size-20);
     font-weight: var(--font-weight-400);
     text-transform: uppercase;
 }
 
-.footer_container-item1 > ul{
+.footer_container-item1 > ul {
     list-style: none;
     margin-top: 10px;
 }
 
-.footer_container-item1 > ul > li{
+.footer_container-item1 > ul > li {
     padding: 7px 0px;
     border-bottom: 1px dashed var(--color-1A925B);
     display: var(--display-flex);
     cursor: pointer;
 }
 
-.footer_container-item1 > ul > li:hover{
+.footer_container-item1 > ul > li:hover {
     background-color: var(--background-color-E3E3E3);
 }
 
-.footer_container-item1 > ul > li > a{
+.footer_container-item1 > ul > li > a {
     color: var(--color-black);
     font-size: var(--font-size-16);
     display: var(--display-block);
@@ -192,7 +189,7 @@
     margin-left: 5px;
 }
 
-.footer__copy{
+.footer__copy {
     background-color: var(--background-color-1A925B);
     color: var(--color-white);
     font-size: var(--font-size-20);
@@ -200,7 +197,7 @@
     padding: 13px 0px;
 }
 
-.footer__copy-body{
+.footer__copy-body {
     max-width: var(--container);
     margin: var(--margin-auto);
 }
