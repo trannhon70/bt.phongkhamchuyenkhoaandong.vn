@@ -101,7 +101,7 @@
          <a style="position: relative;" href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
              <div class="footer_list_icon_number1">10</div>
          </a>
-         <a href="tel:02877779888"></a>
+         <a href="tel:0968063109"></a>
          <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
 
          </a>
