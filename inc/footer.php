@@ -98,11 +98,11 @@
  <footer class="footer_mobile" id="footer_mobile">
      <img width="100%" height="auto" src="<?php echo $local ?>/images/banner/footer_mobile.webp" alt="...">
      <div class="footer_mobile-div ">
-         <a style="position: relative;" href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
+         <a style="position: relative;" href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">
              <div class="footer_list_icon_number1">10</div>
          </a>
          <a href="tel:0968063109"></a>
-         <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
+         <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">
 
          </a>
      </div>
@@ -117,7 +117,7 @@
      </div>
 
      <div style="margin-top:20px"><a class="footer_icon_mess"
-             href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
+             href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">
              <amp-img style="margin-left:3px" src="<?php echo $local ?>/images/icons_chat/icon_message.webp"
                  height="45px" width="45px" alt="..."></amp-img>
              <div class="ping"></div>

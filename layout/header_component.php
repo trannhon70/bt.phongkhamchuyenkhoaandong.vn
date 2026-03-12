@@ -13,11 +13,11 @@ $DSBenh = $benh->getDSBenhThuocKhoaTTYK();
                 <amp-img class="header__top-right-phone-img" src="<?php echo $local ?>/images/icons/icon_phone.webp" height="35px" width="35px" alt="..."></amp-img>
                 <div>028 7777 9888</div>
             </a>
-            <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="header__top-right-phone">
+            <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" class="header__top-right-phone">
                 <amp-img class="header__top-right-phone-img" src="<?php echo $local ?>/images/icons/icon_location.webp" height="35px" width="35px" alt="..."></amp-img>
                 <div>LIÊN HỆ</div>
             </a>
-            <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="header__top-right-phone">
+            <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" class="header__top-right-phone">
                 <amp-img class="header__top-right-phone-img" src="<?php echo $local ?>/images/icons/icon_lich.webp" height="35px" width="35px" alt="..."></amp-img>
                 <div>ĐẶT LỊCH KHÁM</div>
             </a>
@@ -51,10 +51,10 @@ $DSBenh = $benh->getDSBenhThuocKhoaTTYK();
                 <a href="<?php echo $local ?>">TIN TỨC Y KHOA</a>
             </li>
             <li class="header__bottom-item">
-                <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">ĐẶT LỊCH KHÁM</a>
+                <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">ĐẶT LỊCH KHÁM</a>
             </li>
             <li class="header__bottom-item">
-                <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">LIÊN HỆ TƯ VẤN</a>
+                <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">LIÊN HỆ TƯ VẤN</a>
             </li>
 
         </ul>
@@ -73,7 +73,7 @@ $DSBenh = $benh->getDSBenhThuocKhoaTTYK();
                 </div>
                 <span>028 7777 9888</span>
             </a>
-            <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="header__mobile-body-right-item">
+            <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" class="header__mobile-body-right-item">
                 <div class="header__mobile-body-right-item-icon">
                     <amp-img class="header__mobile-body-right-item-icon" src="<?php echo $local ?>/images/icons/icon_lich.webp" height="16px" width="16px" alt="..."></amp-img>
                 </div>
@@ -102,8 +102,8 @@ $DSBenh = $benh->getDSBenhThuocKhoaTTYK();
             </li>
             <li><a href="<?php echo $local ?>">giới thiệu</a></li>
             <li><a href="<?php echo $local ?>">TIN TỨC Y KHOA</a></li>
-            <li><a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">ĐẶT LỊCH KHÁM</a></li>
-            <li><a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">LIÊN HỆ TƯ VẤN</a></li>
+            <li><a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">ĐẶT LỊCH KHÁM</a></li>
+            <li><a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">LIÊN HỆ TƯ VẤN</a></li>
         </ul>
     </nav>
 </header>

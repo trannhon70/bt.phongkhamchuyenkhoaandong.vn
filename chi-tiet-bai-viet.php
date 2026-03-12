@@ -60,26 +60,26 @@ if (strpos($_SERVER['REQUEST_URI'], 'phong-kham-an-dong-phong-kham-da-khoa-uy-ti
                 <div class="bai-viet-footer">Nội dung bài viết cung cấp nhằm mục đích tham khảo thêm kiến thức y tế,
                     một số nội dung có thể không thuộc nghiệp vụ của phòng khám chúng tôi, Hiệu quả của việc hỗ trợ
                     điều trị phụ thuộc vào cơ địa của mỗi người. Cần biết thông tin liên hệ để được tư vấn trực
-                    tuyến miễn phí.<a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">[TƯ VẤN TRỰC TUYẾN]</a>
+                    tuyến miễn phí.<a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">[TƯ VẤN TRỰC TUYẾN]</a>
                 </div>
             </div>
             <div class="detail__right">
                 <div class="detail__right-list">
-                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="detail__right-item">
+                    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" class="detail__right-item">
                         <img width="80px" height="auto" src="<?php echo $local ?>/images/icons/icon_call.gif" alt="...">
                     </a>
-                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="detail__right-item">
+                    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" class="detail__right-item">
                         <img width="80px" height="auto" src="<?php echo $local ?>/images/icons/icon_calende.webp" alt="...">
                     </a>
-                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en" class="detail__right-item">
+                    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" class="detail__right-item">
                         <img width="80px" height="auto" src="<?php echo $local ?>/images/icons/icon_mess.gif" alt="...">
                     </a>
                 </div>
-                <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
+                <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">
                     <img src="<?php echo $local ?>/images/banner/banner_tuvan.webp" alt="..." width="100%" height="auto">
                 </a>
                 <div class="detail__right-scroll">
-                    <a href="https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en">
+                    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">
                         <img style="border: 1px solid #1A925B; border-radius: 10px; " src="<?php echo $local ?>/images/banner/banner_khuyenmai.webp" alt="..." width="100%" height="auto">
                     </a>
                 </div>
@@ -193,7 +193,10 @@ if (strpos($_SERVER['REQUEST_URI'], 'phong-kham-an-dong-phong-kham-da-khoa-uy-ti
                         true) {
                         imgElements[i].style.borderRadius = '8px';
                         let divWrapper = document.createElement('a');
-                        divWrapper.href = "https://npa.zoosnet.net/LR/Chatpre.aspx?id=NPA46777247&lng=en";
+                        divWrapper.href = "javascript:void(0)";
+                        divWrapper.addEventListener("click", function() {
+                            openZoosUrl('chatwin');
+                        });
                         divWrapper.className = 'glow-on-hover';
 
                         imgElements[i].parentNode.insertBefore(divWrapper, imgElements[i]);
